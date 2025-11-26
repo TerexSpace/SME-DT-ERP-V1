@@ -1,0 +1,127 @@
+# SME-DT-ERP: Docker Compose Configuration
+# Digital Twin Framework for ERP-Integrated Warehouse Management in SMEs
+#
+# Usage:
+#   docker-compose up -d              # Start all services
+#   docker-compose logs -f            # View logs
+#   docker-compose down               # Stop all services
+#   docker-compose run simulation     # Run simulation only
+
+version: '3.8'
+
+services:
+  # Main simulation service
+  simulation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sme-dt-erp-simulation
+    volumes:
+      - ./results:/app/results
+      - ./logs:/app/logs
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - SIMULATION_TIME=480
+      - NUM_WORKERS=5
+      - NUM_FORKLIFTS=2
+      - RANDOM_SEED=42
+    command: python run_simulation.py
+    restart: "no"
+    networks:
+      - sme-dt-network
+
+  # Interactive Python environment for development
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sme-dt-erp-dev
+    volumes:
+      - .:/app
+      - ./results:/app/results
+    environment:
+      - PYTHONPATH=/app
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    networks:
+      - sme-dt-network
+
+  # Database for persistent storage (optional)
+  database:
+    image: postgres:15-alpine
+    container_name: sme-dt-erp-db
+    environment:
+      - POSTGRES_USER=sme_dt_erp
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_DB=digital_twin
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - sme-dt-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sme_dt_erp -d digital_twin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # TimescaleDB for time-series data (optional, alternative to postgres)
+  timescaledb:
+    image: timescale/timescaledb:latest-pg15
+    container_name: sme-dt-erp-timescale
+    environment:
+      - POSTGRES_USER=sme_dt_erp
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_DB=digital_twin_ts
+    volumes:
+      - timescale_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - sme-dt-network
+    profiles:
+      - timeseries
+
+  # Redis for event queue (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: sme-dt-erp-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - sme-dt-network
+    profiles:
+      - messaging
+
+  # Grafana for visualization (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: sme-dt-erp-grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - sme-dt-network
+    profiles:
+      - monitoring
+    depends_on:
+      - database
+
+networks:
+  sme-dt-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  timescale_data:
+  redis_data:
+  grafana_data:

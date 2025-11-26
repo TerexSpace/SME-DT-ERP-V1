@@ -1,0 +1,1300 @@
+{
+  "timestamp": "20251125_163014",
+  "baseline": {
+    "config": {
+      "simulation_time": 480.0,
+      "time_unit": "minutes",
+      "random_seed": 42,
+      "num_storage_locations": 100,
+      "num_workers": 5,
+      "num_forklifts": 2,
+      "pick_time_mean": 2.0,
+      "pick_time_std": 0.5,
+      "pack_time_mean": 3.0,
+      "pack_time_std": 0.8,
+      "transport_time_mean": 1.5,
+      "transport_time_std": 0.3,
+      "order_arrival_rate": 10.0,
+      "items_per_order_mean": 3.0,
+      "items_per_order_std": 1.5,
+      "erp_sync_interval": 60.0,
+      "event_buffer_size": 1000,
+      "sync_threshold": 0.05,
+      "calibration_window": 100
+    },
+    "duration": 480.0,
+    "orders_completed": 52,
+    "orders_in_progress": 27,
+    "events_recorded": 444,
+    "metrics": {
+      "orders_completed": 52,
+      "total_items_picked": 254,
+      "avg_order_time": 113.30815806249454,
+      "avg_picking_time": 53.27160271489204,
+      "avg_packing_time": 58.98542617199318,
+      "avg_items_per_order": 4.884615384615385,
+      "order_time_std": 59.386093873960455,
+      "order_time_min": 7.941086556481496,
+      "order_time_max": 211.73181563310104,
+      "order_time_median": 116.98543354402065,
+      "throughput_orders_per_hour": 0.5295293915810307,
+      "throughput_items_per_hour": 2.5865474127227275
+    },
+    "inventory_snapshot": {
+      "SKU-0000": {
+        "sku": "SKU-0000",
+        "name": "Product 0",
+        "quantity": 45,
+        "location": "A-00-00",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 16.24437268638211,
+        "last_updated": "2025-11-25T16:30:14.488068"
+      },
+      "SKU-0001": {
+        "sku": "SKU-0001",
+        "name": "Product 1",
+        "quantity": 13,
+        "location": "A-00-01",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 34.05663828222873,
+        "last_updated": "2025-11-25T16:30:14.488075"
+      },
+      "SKU-0002": {
+        "sku": "SKU-0002",
+        "name": "Product 2",
+        "quantity": 79,
+        "location": "A-00-02",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 47.755399898887184,
+        "last_updated": "2025-11-25T16:30:14.488080"
+      },
+      "SKU-0003": {
+        "sku": "SKU-0003",
+        "name": "Product 3",
+        "quantity": 21,
+        "location": "A-00-03",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 24.524397038077144,
+        "last_updated": "2025-11-25T16:30:14.488084"
+      },
+      "SKU-0004": {
+        "sku": "SKU-0004",
+        "name": "Product 4",
+        "quantity": 13,
+        "location": "A-00-04",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 16.149108519676588,
+        "last_updated": "2025-11-25T16:30:14.488087"
+      },
+      "SKU-0005": {
+        "sku": "SKU-0005",
+        "name": "Product 5",
+        "quantity": 13,
+        "location": "A-00-05",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 15.712786933999261,
+        "last_updated": "2025-11-25T16:30:14.488089"
+      },
+      "SKU-0006": {
+        "sku": "SKU-0006",
+        "name": "Product 6",
+        "quantity": 16,
+        "location": "A-00-06",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 31.754105795456315,
+        "last_updated": "2025-11-25T16:30:14.488092"
+      },
+      "SKU-0007": {
+        "sku": "SKU-0007",
+        "name": "Product 7",
+        "quantity": 85,
+        "location": "A-00-07",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 26.170095294664705,
+        "last_updated": "2025-11-25T16:30:14.488094"
+      },
+      "SKU-0008": {
+        "sku": "SKU-0008",
+        "name": "Product 8",
+        "quantity": 24,
+        "location": "A-00-08",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 24.959744644882594,
+        "last_updated": "2025-11-25T16:30:14.488096"
+      },
+      "SKU-0009": {
+        "sku": "SKU-0009",
+        "name": "Product 9",
+        "quantity": 77,
+        "location": "A-00-09",
+        "min_stock": 10,
+        "max_stock": 100,
+        "unit_cost": 24.335035792857617,
+        "last_updated": "2025-11-25T16:30:14.488099"
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_params": {
+        "num_workers": 7
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 100,
+          "num_workers": 7,
+          "num_forklifts": 2,
+          "pick_time_mean": 2.0,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 10.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 47,
+        "orders_in_progress": 47,
+        "events_recorded": 482,
+        "metrics": {
+          "orders_completed": 47,
+          "total_items_picked": 228,
+          "avg_order_time": 185.96749772497282,
+          "avg_picking_time": 86.26349695337977,
+          "avg_packing_time": 98.69595020066247,
+          "avg_items_per_order": 4.851063829787234,
+          "order_time_std": 84.47295405137243,
+          "order_time_min": 7.941086556481496,
+          "order_time_max": 323.73280930923556,
+          "order_time_median": 187.55704118056212,
+          "throughput_orders_per_hour": 0.322637023856362,
+          "throughput_items_per_hour": 1.5651327965797988
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 46,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 23.10801741759761,
+            "last_updated": "2025-11-25T16:30:14.517978"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 47,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 29.948561495005716,
+            "last_updated": "2025-11-25T16:30:14.517985"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 30,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 23.920085019780874,
+            "last_updated": "2025-11-25T16:30:14.517988"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 54,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 35.47930753727298,
+            "last_updated": "2025-11-25T16:30:14.517991"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 29,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 32.698171217812124,
+            "last_updated": "2025-11-25T16:30:14.517993"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 46,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 23.27338259411733,
+            "last_updated": "2025-11-25T16:30:14.518003"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 7,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 18.67437271707592,
+            "last_updated": "2025-11-25T16:30:14.518006"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 31,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 24.344966749542557,
+            "last_updated": "2025-11-25T16:30:14.518009"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 75,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 32.299770671589314,
+            "last_updated": "2025-11-25T16:30:14.518011"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 48,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 25.92446856111564,
+            "last_updated": "2025-11-25T16:30:14.518014"
+          }
+        }
+      },
+      "scenario_name": "Add 2 Workers"
+    },
+    {
+      "scenario_params": {
+        "num_forklifts": 3
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 100,
+          "num_workers": 7,
+          "num_forklifts": 3,
+          "pick_time_mean": 2.0,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 10.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 75,
+        "orders_in_progress": 9,
+        "events_recorded": 539,
+        "metrics": {
+          "orders_completed": 75,
+          "total_items_picked": 399,
+          "avg_order_time": 41.13601215094089,
+          "avg_picking_time": 20.77848215875114,
+          "avg_packing_time": 19.33927128391822,
+          "avg_items_per_order": 5.32,
+          "order_time_std": 19.63628439764782,
+          "order_time_min": 6.889604937208048,
+          "order_time_max": 97.62153476963914,
+          "order_time_median": 39.376797701506234,
+          "throughput_orders_per_hour": 1.4585759985640134,
+          "throughput_items_per_hour": 7.759624312360552
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 66,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 33.20367966418016,
+            "last_updated": "2025-11-25T16:30:14.526937"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 44,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 24.79426669692062,
+            "last_updated": "2025-11-25T16:30:14.526942"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 46,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 15.55221101065859,
+            "last_updated": "2025-11-25T16:30:14.526945"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 45,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 19.386930578844304,
+            "last_updated": "2025-11-25T16:30:14.526948"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 78,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 8.625994594595081,
+            "last_updated": "2025-11-25T16:30:14.526951"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 29,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 15.406766587768406,
+            "last_updated": "2025-11-25T16:30:14.526954"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 89,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 11.87623699597166,
+            "last_updated": "2025-11-25T16:30:14.526957"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 34,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 7.890298282124514,
+            "last_updated": "2025-11-25T16:30:14.526959"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 53,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 19.889662596713762,
+            "last_updated": "2025-11-25T16:30:14.526962"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 65,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 23.70984053464202,
+            "last_updated": "2025-11-25T16:30:14.526965"
+          }
+        }
+      },
+      "scenario_name": "Add 1 Forklift"
+    },
+    {
+      "scenario_params": {
+        "num_workers": 10
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 100,
+          "num_workers": 10,
+          "num_forklifts": 3,
+          "pick_time_mean": 2.0,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 10.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 77,
+        "orders_in_progress": 10,
+        "events_recorded": 540,
+        "metrics": {
+          "orders_completed": 77,
+          "total_items_picked": 378,
+          "avg_order_time": 33.00501509527395,
+          "avg_picking_time": 16.91879399077556,
+          "avg_packing_time": 15.061081424299372,
+          "avg_items_per_order": 4.909090909090909,
+          "order_time_std": 19.712444762933156,
+          "order_time_min": 7.100483348325156,
+          "order_time_max": 76.65155521970554,
+          "order_time_median": 28.306994291355636,
+          "throughput_orders_per_hour": 1.8179055463783598,
+          "throughput_items_per_hour": 8.924263591311949
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 31,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 12.914900676793923,
+            "last_updated": "2025-11-25T16:30:14.535874"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 94,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 28.308098769968336,
+            "last_updated": "2025-11-25T16:30:14.535880"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 14,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 30.08326073150279,
+            "last_updated": "2025-11-25T16:30:14.535883"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 18,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 25.540782146157763,
+            "last_updated": "2025-11-25T16:30:14.535885"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 66,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 35.04099796638589,
+            "last_updated": "2025-11-25T16:30:14.535887"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 75,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 31.795354331123885,
+            "last_updated": "2025-11-25T16:30:14.535890"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 62,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 32.569354524279326,
+            "last_updated": "2025-11-25T16:30:14.535892"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 67,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 24.2033340586395,
+            "last_updated": "2025-11-25T16:30:14.535895"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 74,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 25.06611254345152,
+            "last_updated": "2025-11-25T16:30:14.535897"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 29,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 38.46449489718132,
+            "last_updated": "2025-11-25T16:30:14.535899"
+          }
+        }
+      },
+      "scenario_name": "Double Workers"
+    },
+    {
+      "scenario_params": {
+        "order_arrival_rate": 15.0
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 100,
+          "num_workers": 10,
+          "num_forklifts": 3,
+          "pick_time_mean": 2.0,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 15.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 81,
+        "orders_in_progress": 46,
+        "events_recorded": 709,
+        "metrics": {
+          "orders_completed": 81,
+          "total_items_picked": 401,
+          "avg_order_time": 153.84876270833897,
+          "avg_picking_time": 78.72741461139383,
+          "avg_packing_time": 74.12358166451196,
+          "avg_items_per_order": 4.950617283950617,
+          "order_time_std": 52.87316478466383,
+          "order_time_min": 6.011644044494237,
+          "order_time_max": 225.01174684143683,
+          "order_time_median": 162.47312792419245,
+          "throughput_orders_per_hour": 0.38999338664650735,
+          "throughput_items_per_hour": 1.930708000558635
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 29,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 37.325566197454485,
+            "last_updated": "2025-11-25T16:30:14.544962"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 53,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 27.24697260546966,
+            "last_updated": "2025-11-25T16:30:14.544965"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 38,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 11.64071052910842,
+            "last_updated": "2025-11-25T16:30:14.544968"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 91,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 5.249516816211429,
+            "last_updated": "2025-11-25T16:30:14.544970"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 21,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 40.028918304529626,
+            "last_updated": "2025-11-25T16:30:14.544973"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 34,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 12.914900676793923,
+            "last_updated": "2025-11-25T16:30:14.544975"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 98,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 28.308098769968336,
+            "last_updated": "2025-11-25T16:30:14.544978"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 7,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 30.08326073150279,
+            "last_updated": "2025-11-25T16:30:14.544980"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 16,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 25.540782146157763,
+            "last_updated": "2025-11-25T16:30:14.544982"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 63,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 35.04099796638589,
+            "last_updated": "2025-11-25T16:30:14.544984"
+          }
+        }
+      },
+      "scenario_name": "High Demand (+50%)"
+    },
+    {
+      "scenario_params": {
+        "order_arrival_rate": 15.0,
+        "num_workers": 8
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 100,
+          "num_workers": 8,
+          "num_forklifts": 3,
+          "pick_time_mean": 2.0,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 15.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 76,
+        "orders_in_progress": 38,
+        "events_recorded": 666,
+        "metrics": {
+          "orders_completed": 76,
+          "total_items_picked": 403,
+          "avg_order_time": 99.32374752152103,
+          "avg_picking_time": 50.04775776179866,
+          "avg_packing_time": 48.3051816066102,
+          "avg_items_per_order": 5.302631578947368,
+          "order_time_std": 34.609886079014316,
+          "order_time_min": 6.011644044494237,
+          "order_time_max": 166.29469938449063,
+          "order_time_median": 100.11129643581818,
+          "throughput_orders_per_hour": 0.6040851407363528,
+          "throughput_items_per_hour": 3.2032409436414495
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 31,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 15.374211858432849,
+            "last_updated": "2025-11-25T16:30:14.559276"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 33,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 19.199657480269394,
+            "last_updated": "2025-11-25T16:30:14.559281"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 76,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 47.78949021770456,
+            "last_updated": "2025-11-25T16:30:14.559285"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 90,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 13.331742909694789,
+            "last_updated": "2025-11-25T16:30:14.559288"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 32,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 38.23720940790278,
+            "last_updated": "2025-11-25T16:30:14.559290"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 36,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 37.60632504918732,
+            "last_updated": "2025-11-25T16:30:14.559293"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 74,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 31.85558332305358,
+            "last_updated": "2025-11-25T16:30:14.559296"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 15,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 42.46827634971805,
+            "last_updated": "2025-11-25T16:30:14.559298"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 42,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 15.236742356714961,
+            "last_updated": "2025-11-25T16:30:14.559301"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 25,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 18.6020414951196,
+            "last_updated": "2025-11-25T16:30:14.559303"
+          }
+        }
+      },
+      "scenario_name": "High Demand + More Staff"
+    },
+    {
+      "scenario_params": {
+        "pick_time_mean": 1.6
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 100,
+          "num_workers": 8,
+          "num_forklifts": 3,
+          "pick_time_mean": 1.6,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 15.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 101,
+        "orders_in_progress": 24,
+        "events_recorded": 757,
+        "metrics": {
+          "orders_completed": 101,
+          "total_items_picked": 519,
+          "avg_order_time": 53.43314223743575,
+          "avg_picking_time": 27.043963832061507,
+          "avg_packing_time": 25.399913529528142,
+          "avg_items_per_order": 5.138613861386139,
+          "order_time_std": 20.499236440104955,
+          "order_time_min": 5.033435375922813,
+          "order_time_max": 121.35652178383395,
+          "order_time_median": 51.78270631022297,
+          "throughput_orders_per_hour": 1.1228985885461074,
+          "throughput_items_per_hour": 5.770142252033958
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 76,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 41.36896484630402,
+            "last_updated": "2025-11-25T16:30:14.569587"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 74,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 39.858865266720855,
+            "last_updated": "2025-11-25T16:30:14.569591"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 65,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 24.600852185175242,
+            "last_updated": "2025-11-25T16:30:14.569593"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 78,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 17.07779921221514,
+            "last_updated": "2025-11-25T16:30:14.569596"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 37,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 42.382895850077155,
+            "last_updated": "2025-11-25T16:30:14.569598"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 17,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 17.551771213661155,
+            "last_updated": "2025-11-25T16:30:14.569600"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 67,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 15.97385476359302,
+            "last_updated": "2025-11-25T16:30:14.569603"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 66,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 30.6432340105245,
+            "last_updated": "2025-11-25T16:30:14.569605"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 86,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 22.054518685771882,
+            "last_updated": "2025-11-25T16:30:14.569607"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 5,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 27.24379266271649,
+            "last_updated": "2025-11-25T16:30:14.569609"
+          }
+        }
+      },
+      "scenario_name": "Faster Picking (-20% time)"
+    },
+    {
+      "scenario_params": {
+        "num_storage_locations": 150
+      },
+      "results": {
+        "config": {
+          "simulation_time": 480.0,
+          "time_unit": "minutes",
+          "random_seed": 42,
+          "num_storage_locations": 150,
+          "num_workers": 8,
+          "num_forklifts": 3,
+          "pick_time_mean": 1.6,
+          "pick_time_std": 0.5,
+          "pack_time_mean": 3.0,
+          "pack_time_std": 0.8,
+          "transport_time_mean": 1.5,
+          "transport_time_std": 0.3,
+          "order_arrival_rate": 15.0,
+          "items_per_order_mean": 3.0,
+          "items_per_order_std": 1.5,
+          "erp_sync_interval": 60.0,
+          "event_buffer_size": 1000,
+          "sync_threshold": 0.05,
+          "calibration_window": 100
+        },
+        "duration": 480.0,
+        "orders_completed": 101,
+        "orders_in_progress": 24,
+        "events_recorded": 757,
+        "metrics": {
+          "orders_completed": 101,
+          "total_items_picked": 519,
+          "avg_order_time": 53.43314223743575,
+          "avg_picking_time": 27.043963832061507,
+          "avg_packing_time": 25.399913529528142,
+          "avg_items_per_order": 5.138613861386139,
+          "order_time_std": 20.499236440104955,
+          "order_time_min": 5.033435375922813,
+          "order_time_max": 121.35652178383395,
+          "order_time_median": 51.78270631022297,
+          "throughput_orders_per_hour": 1.1228985885461074,
+          "throughput_items_per_hour": 5.770142252033958
+        },
+        "inventory_snapshot": {
+          "SKU-0000": {
+            "sku": "SKU-0000",
+            "name": "Product 0",
+            "quantity": 86,
+            "location": "A-00-00",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 26.424189985287413,
+            "last_updated": "2025-11-25T16:30:14.583826"
+          },
+          "SKU-0001": {
+            "sku": "SKU-0001",
+            "name": "Product 1",
+            "quantity": 68,
+            "location": "A-00-01",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 25.167854731395686,
+            "last_updated": "2025-11-25T16:30:14.583832"
+          },
+          "SKU-0002": {
+            "sku": "SKU-0002",
+            "name": "Product 2",
+            "quantity": 8,
+            "location": "A-00-02",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 9.187400774960224,
+            "last_updated": "2025-11-25T16:30:14.583835"
+          },
+          "SKU-0003": {
+            "sku": "SKU-0003",
+            "name": "Product 3",
+            "quantity": 31,
+            "location": "A-00-03",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 23.198050790506766,
+            "last_updated": "2025-11-25T16:30:14.583838"
+          },
+          "SKU-0004": {
+            "sku": "SKU-0004",
+            "name": "Product 4",
+            "quantity": 37,
+            "location": "A-00-04",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 18.77927135585398,
+            "last_updated": "2025-11-25T16:30:14.583841"
+          },
+          "SKU-0005": {
+            "sku": "SKU-0005",
+            "name": "Product 5",
+            "quantity": 80,
+            "location": "A-00-05",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 21.605920279746663,
+            "last_updated": "2025-11-25T16:30:14.583844"
+          },
+          "SKU-0006": {
+            "sku": "SKU-0006",
+            "name": "Product 6",
+            "quantity": 80,
+            "location": "A-00-06",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 28.891486901559553,
+            "last_updated": "2025-11-25T16:30:14.583847"
+          },
+          "SKU-0007": {
+            "sku": "SKU-0007",
+            "name": "Product 7",
+            "quantity": 61,
+            "location": "A-00-07",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 49.84841587816994,
+            "last_updated": "2025-11-25T16:30:14.583849"
+          },
+          "SKU-0008": {
+            "sku": "SKU-0008",
+            "name": "Product 8",
+            "quantity": 71,
+            "location": "A-00-08",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 19.885608373816858,
+            "last_updated": "2025-11-25T16:30:14.583852"
+          },
+          "SKU-0009": {
+            "sku": "SKU-0009",
+            "name": "Product 9",
+            "quantity": 91,
+            "location": "A-00-09",
+            "min_stock": 10,
+            "max_stock": 100,
+            "unit_cost": 25.418536828393034,
+            "last_updated": "2025-11-25T16:30:14.583854"
+          }
+        }
+      },
+      "scenario_name": "More Locations"
+    }
+  ],
+  "calibration": {
+    "num_events": 200,
+    "calibrated_params": {
+      "pick_time_mean": 3.0581787146666666,
+      "pick_time_std": 0.7305178414980533,
+      "pack_time_mean": 2.5563664906666665,
+      "pack_time_std": 0.5819299234948759
+    }
+  },
+  "sensitivity": [
+    {
+      "parameter": "num_workers",
+      "value": 3,
+      "throughput": 0.24898841770481525,
+      "avg_order_time": 240.975064435054
+    },
+    {
+      "parameter": "num_workers",
+      "value": 4,
+      "throughput": 0.308550607947721,
+      "avg_order_time": 194.45756532155676
+    },
+    {
+      "parameter": "num_workers",
+      "value": 5,
+      "throughput": 0.3631000961089687,
+      "avg_order_time": 165.24369077003385
+    },
+    {
+      "parameter": "num_workers",
+      "value": 6,
+      "throughput": 0.27766087692988956,
+      "avg_order_time": 216.09094037094118
+    },
+    {
+      "parameter": "num_workers",
+      "value": 7,
+      "throughput": 0.2872656331484819,
+      "avg_order_time": 208.8659173824221
+    },
+    {
+      "parameter": "num_workers",
+      "value": 8,
+      "throughput": 0.35316242333877856,
+      "avg_order_time": 169.89349952003167
+    },
+    {
+      "parameter": "num_workers",
+      "value": 9,
+      "throughput": 0.3101995419127894,
+      "avg_order_time": 193.42388331723782
+    },
+    {
+      "parameter": "num_workers",
+      "value": 10,
+      "throughput": 0.32896473318966846,
+      "avg_order_time": 182.39037181352293
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 5,
+      "throughput": 1.4544871584655878,
+      "avg_order_time": 41.25165330665211,
+      "orders_completed": 41
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 8,
+      "throughput": 1.1383806953815687,
+      "avg_order_time": 52.706445430268715,
+      "orders_completed": 60
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 10,
+      "throughput": 0.7739925020837211,
+      "avg_order_time": 77.52013080032387,
+      "orders_completed": 57
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 12,
+      "throughput": 0.3895205377591333,
+      "avg_order_time": 154.0355236341916,
+      "orders_completed": 42
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 15,
+      "throughput": 0.32896473318966846,
+      "avg_order_time": 182.39037181352293,
+      "orders_completed": 38
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 18,
+      "throughput": 0.3144100684519851,
+      "avg_order_time": 190.83358333724243,
+      "orders_completed": 34
+    },
+    {
+      "parameter": "order_arrival_rate",
+      "value": 20,
+      "throughput": 0.2477450132008015,
+      "avg_order_time": 242.18449132362147,
+      "orders_completed": 35
+    }
+  ]
+}
