@@ -35,16 +35,16 @@ dev_requirements = [
 setup(
     name="sme-dt-erp",
     version="0.1.0",
-    author="[Author Name]",
-    author_email="[author@email.com]",
+    author="Almas Ospanov",
+    author_email="a.ospanov@astanait.edu.kz",
     description="Digital Twin Framework for ERP-Integrated Warehouse Management in SMEs",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/[username]/sme-dt-erp",
+    url="https://github.com/TerexSpace/SME-DT-ERP-V1",
     project_urls={
-        "Bug Tracker": "https://github.com/[username]/sme-dt-erp/issues",
-        "Documentation": "https://sme-dt-erp.readthedocs.io/",
-        "Source Code": "https://github.com/[username]/sme-dt-erp",
+        "Bug Tracker": "https://github.com/TerexSpace/SME-DT-ERP-V1/issues",
+        "Documentation": "https://github.com/TerexSpace/SME-DT-ERP-V1",
+        "Source Code": "https://github.com/TerexSpace/SME-DT-ERP-V1",
     },
     license="MIT",
     classifiers=[

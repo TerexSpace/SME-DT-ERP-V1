@@ -1,13 +1,22 @@
 # SME-DT-ERP Development Guide
 
+## Project Overview
+
+**Repository**: https://github.com/TerexSpace/SME-DT-ERP-V1  
+**Author**: Almas Ospanov (a.ospanov@astanait.edu.kz)  
+**Institution**: Astana IT University, School of Software Engineering  
+**License**: MIT  
+**Status**: Ready for JOSS submission
+
 ## Architecture
 
 **SimPy discrete-event simulation** framework for warehouse digital twins with ERP integration using **Ports & Adapters** pattern.
 
 ### Core Files
 - `core.py` (955 LOC): Simulation engine (`WarehouseDigitalTwin`), domain models, `ERPAdapterPort` interface, `MockERPAdapter`
-- `run_simulation.py`: Batch scenario runner with what-if analysis and sensitivity sweeps
-- `tests/test_core.py`: Pytest suite with fixtures (`default_config`, `mock_erp_adapter`, `digital_twin`, `sample_order`)
+- `run_simulation.py` (383 LOC): Batch scenario runner with what-if analysis and sensitivity sweeps
+- `tests/test_core.py` (680 LOC): Pytest suite with fixtures (`default_config`, `mock_erp_adapter`, `digital_twin`, `sample_order`)
+- `paper/paper.md`: JOSS paper (606 words, JOSS-compliant)
 
 ### Data Flow
 ```
@@ -63,21 +72,45 @@ self._record_event(EventType.ORDER_STATUS_CHANGED, {
 ## Development Commands
 
 ```powershell
-# Setup
-python -m venv venv; .\venv\Scripts\Activate.ps1; pip install -r requirements.txt
+# Setup (Windows PowerShell)
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+# OR install in development mode with test dependencies:
+pip install -e ".[dev]"
 
 # Run simulations
-python core.py                    # Quick demo
+python core.py                    # Quick demo (8-hour shift)
 python run_simulation.py          # Full suite → results/*.json, results/*.csv
 
 # Tests (use 60-min sim time for speed)
 pytest tests/test_core.py -v
 pytest tests/test_core.py::TestWarehouseDigitalTwin -v  # Single class
+pytest tests/ -v --cov=sme_dt_erp --cov-report=html     # With coverage
+
+# Code quality
+black sme_dt_erp/ tests/          # Auto-format
+isort sme_dt_erp/ tests/          # Sort imports
+flake8 sme_dt_erp/ tests/         # Linting
+mypy sme_dt_erp/                  # Type checking
 
 # Docker
 docker build -t sme-dt-erp:latest .
 docker run --rm -v ${PWD}/results:/app/results sme-dt-erp:latest python run_simulation.py
+
+# JOSS paper compilation (requires Docker)
+docker run --rm --volume ${PWD}/paper:/data --env JOURNAL=joss openjournals/inara
+# OR push to GitHub → Actions tab → Download paper.pdf artifact
 ```
+
+## CI/CD Pipeline
+
+**GitHub Actions** runs automatically on push/PR to `main`:
+- `.github/workflows/ci.yml`: Tests (Python 3.9-3.12), linting, coverage, Docker build
+- `.github/workflows/draft-pdf.yml`: JOSS paper PDF compilation (triggered on `paper/**` changes)
+
+**Test matrix**: Ubuntu + Python 3.9, 3.10, 3.11, 3.12  
+**Coverage target**: 80%+ (current: tracked via Codecov)
 
 ## Test Fixtures
 
