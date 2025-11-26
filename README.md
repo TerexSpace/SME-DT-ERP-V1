@@ -21,8 +21,8 @@ An open-source Python framework enabling Small and Medium Enterprises (SMEs) to 
 
 ```bash
 # Clone repository
-git clone https://github.com/[username]/sme-dt-erp.git
-cd sme-dt-erp
+git clone https://github.com/TerexSpace/SME-DT-ERP-V1.git
+cd SME-DT-ERP-V1
 
 # Create virtual environment
 python -m venv venv

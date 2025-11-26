@@ -23,14 +23,14 @@ This document provides step-by-step instructions for submitting SME-DT-ERP to JO
 
 - [x] **paper.md**: Markdown format paper (250-1000 words)
 - [x] **paper.bib**: BibTeX references with DOIs
-- [ ] **Author information**: Name, ORCID, affiliation (YOU MUST ADD)
+- [x] **Author information**: Name, ORCID, affiliation
 - [x] **Summary section**: Describes software purpose
 - [x] **Statement of Need**: Explains research application
 - [x] **References**: 25 verified citations
 
 ### 3. Repository Requirements
 
-- [ ] **GitHub repository**: Create public repository
+- [x] **GitHub repository**: https://github.com/TerexSpace/SME-DT-ERP-V1
 - [ ] **GitHub Actions CI**: `.github/workflows/ci.yml` (included, needs activation)
 - [ ] **Zenodo archive**: Archive release for DOI
 - [ ] **Release tag**: Create v0.1.0 release
@@ -39,41 +39,18 @@ This document provides step-by-step instructions for submitting SME-DT-ERP to JO
 
 ## Step-by-Step Submission Process
 
-### Step 1: Complete Author Information
+### Step 1: Complete Author Information ✅
 
-Edit `paper/paper.md` and replace placeholders:
+**COMPLETED** - Author information has been updated:
+- Name: Almas Ospanov
+- ORCID: 0009-0004-3834-130X
+- Email: a.ospanov@astanait.edu.kz
+- Affiliation: Astana IT University, School of Software Engineering
 
-```yaml
-authors:
-  - name: YOUR FULL NAME
-    orcid: 0000-0000-0000-0000  # Get ORCID at https://orcid.org/
-    affiliation: 1
+### Step 2: Create GitHub Repository ✅
 
-affiliations:
-  - name: Your University/Institution
-    index: 1
-```
-
-### Step 2: Create GitHub Repository
-
-1. Go to https://github.com/new
-2. Repository name: `sme-dt-erp`
-3. Description: "Digital Twin Framework for ERP-Integrated Warehouse Management in SMEs"
-4. Visibility: **Public** (required for JOSS)
-5. Initialize with: Do NOT add README (we have one)
-6. Create repository
-
-Push code to GitHub:
-
-```bash
-cd sme_dt_erp
-git init
-git add .
-git commit -m "Initial commit: SME-DT-ERP v0.1.0"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/sme-dt-erp.git
-git push -u origin main
-```
+**COMPLETED** - Repository created and available at:
+https://github.com/TerexSpace/SME-DT-ERP-V1
 
 ### Step 3: Verify CI/CD Works
 
