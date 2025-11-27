@@ -149,10 +149,10 @@ If you use SME-DT-ERP in your research, please cite:
 
 ```bibtex
 @software{sme_dt_erp,
-  author = {[Author Name]},
+  author = {Ospanov, Almas},
   title = {{SME-DT-ERP}: Digital Twin Framework for ERP-Integrated Warehouse Management},
   year = {2025},
-  url = {https://github.com/[username]/sme-dt-erp}
+  url = {https://github.com/TerexSpace/SME-DT-ERP-V1}
 }
 ```
 
@@ -165,4 +165,3 @@ MIT License - see [LICENSE](LICENSE) for details.
 - SimPy team for the discrete-event simulation framework
 - OpenTwins project for architectural inspiration
 - SME research community for requirements validation
-# SME-DT-ERP-V1

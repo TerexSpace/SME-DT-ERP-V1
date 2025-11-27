@@ -5,7 +5,7 @@ SME-DT-ERP: Digital Twin Framework for ERP-Integrated Warehouse Management in SM
 This module provides the core simulation engine and ERP integration components
 for implementing warehouse digital twins in Small and Medium Enterprises.
 
-Author: [Author Name]
+Author: Almas Ospanov
 License: MIT
 Version: 0.1.0
 """

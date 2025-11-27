@@ -19,13 +19,13 @@ Example:
     >>> dt = WarehouseDigitalTwin(config, adapter)
     >>> results = dt.run_simulation()
 
-Author: [Author Name]
+Author: Almas Ospanov
 License: MIT
 Version: 0.1.0
 """
 
 __version__ = "0.1.0"
-__author__ = "[Author Name]"
+__author__ = "Almas Ospanov"
 __license__ = "MIT"
 
 from .core import (

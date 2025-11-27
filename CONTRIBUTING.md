@@ -256,6 +256,6 @@ Brief description of changes
 ## Questions?
 
 - Open an issue for questions
-- Email: [author@email.com]
+- Email: a.ospanov@astanait.edu.kz
 
 Thank you for contributing!
