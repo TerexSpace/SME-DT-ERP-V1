@@ -19,6 +19,7 @@ affiliations:
     index: 1
 date: 26 November 2025
 repository: https://github.com/TerexSpace/SME-DT-ERP-V1
+DOI: https://doi.org/10.5281/zenodo.17738548
 bibliography: paper.bib
 ---
 
