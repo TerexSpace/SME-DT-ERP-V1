@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.pdf
+
+# Markdown files (exclude all except README.md)
+*.md
+!README.md
+
+# Sensitive information
+*.env
+.env.*
+*.key
+*.pem
+*.p12
+credentials.json
+secrets.json
+config.ini
+
+# Results and data
+results/*.json
+results/*.csv
+results/*.txt
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# OS specific
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Docker
+docker-compose.override.yml
+
+# Private notes and documents
+PRIVATE_*
+TODO_*
+NOTES_*

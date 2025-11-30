@@ -1,10 +1,11 @@
 # SME-DT-ERP: Digital Twin Framework for ERP-Integrated Warehouse Management
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Research-Only](https://img.shields.io/badge/License-Research--Only-red.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![JOSS](https://img.shields.io/badge/JOSS-submitted-green.svg)](https://joss.theoj.org/)
+[![JUCS](https://img.shields.io/badge/JUCS-submitted-green.svg)](https://www.jucs.org/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17738548-blue.svg)](https://doi.org/10.5281/zenodo.17738548)
 
-An open-source Python framework enabling Small and Medium Enterprises (SMEs) to implement warehouse digital twins integrated with ERP systems.
+A research framework for implementing digital twins in ERP systems, specifically designed for Small and Medium Enterprises (SMEs). This software is licensed for **academic research and educational purposes only**.
 
 ## Features
 
@@ -158,7 +159,23 @@ If you use SME-DT-ERP in your research, please cite:
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+**RESEARCH-ONLY LICENSE** - This software is licensed exclusively for academic research, educational, and non-commercial purposes. Commercial use is prohibited without explicit written permission.
+
+### Permitted Uses:
+- Academic research and education
+- Non-commercial evaluation and testing
+- Scientific publication and citation
+- Modification for research purposes
+
+### Prohibited Uses:
+- Commercial use or exploitation
+- Distribution for profit
+- Integration into commercial products
+- Production deployment without permission
+
+For commercial licensing inquiries, contact: a.ospanov@astanait.edu.kz
+
+See [LICENSE](LICENSE) for complete terms.
 
 ## Acknowledgments
 

@@ -1,0 +1,74 @@
+%% jucs2e.sty - JUCS Journal Style File
+%% Based on J.UCS template requirements
+%% Version 2e - 2025
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jucs2e}[2025/01/01 JUCS Style Package v2e]
+
+% Required packages
+\RequirePackage{ifthen}
+\RequirePackage{fancyhdr}
+
+% Page layout already handled by geometry in main document
+% This file provides JUCS-specific commands and formatting
+
+% Header/Footer commands
+\newcommand{\header}[1]{%
+  \fancyhead[L]{\fontsize{8pt}{10pt}\selectfont #1}%
+  \fancyhead[R]{\fontsize{8pt}{10pt}\selectfont \jucs, \jucsvol{} (\jucspages)}%
+  \fancyfoot[C]{\fontsize{9pt}{11pt}\selectfont \thepage}%
+  \renewcommand{\headrulewidth}{0.5pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+% Abstract environment (enhanced)
+\renewenvironment{abstract}{%
+  \small
+  \begin{center}%
+  \bfseries Abstract%
+  \end{center}%
+  \quotation
+}{%
+  \endquotation
+}
+
+% Keywords environment
+\newenvironment{keywords}{%
+  \vspace{6pt}
+  \noindent\textbf{Keywords:} 
+}{%
+  \par\vspace{6pt}
+}
+
+% Category environment  
+\newenvironment{category}{%
+  \vspace{6pt}
+  \noindent\textbf{Categories and Subject Descriptors:} 
+}{%
+  \par\vspace{6pt}
+}
+
+% DOI environment
+\newenvironment{doi}{%
+  \vspace{6pt}
+  \noindent\textbf{DOI:} 
+}{%
+  \par\vspace{12pt}
+}
+
+% Acknowledgements environment
+\newenvironment{Acknowledgements}{%
+  \section*{Acknowledgements}
+  \addcontentsline{toc}{section}{Acknowledgements}
+}{%
+  \par
+}
+
+% ORCID command
+\newcommand{\orcid}[1]{ORCID: #1}
+
+% Ensure proper spacing
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1em}
+
+\endinput
