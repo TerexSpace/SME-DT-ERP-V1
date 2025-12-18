@@ -104,3 +104,7 @@ docker-compose.override.yml
 PRIVATE_*
 TODO_*
 NOTES_*
+
+EJISDC/
+JCS_n_T/
+SACS/

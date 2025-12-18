@@ -111,7 +111,31 @@ class SimulationConfig:
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'SimulationConfig':
         """Create configuration from dictionary."""
-        return cls(**{k: v for k, v in data.items() if k in cls.__dataclass_fields__})
+        # Filter for known fields
+        filtered_data = {k: v for k, v in data.items() if k in cls.__dataclass_fields__}
+        # Convert types if necessary (basic handling)
+        try:
+            if 'simulation_time' in filtered_data:
+                filtered_data['simulation_time'] = float(filtered_data['simulation_time'])
+            if 'num_workers' in filtered_data:
+                 filtered_data['num_workers'] = int(filtered_data['num_workers'])
+        except ValueError:
+            pass # Keep original if conversion fails
+        return cls(**filtered_data)
+
+    @classmethod
+    def from_csv(cls, filepath: str) -> 'SimulationConfig':
+        """Load configuration from a single-row CSV file."""
+        import csv
+        try:
+            with open(filepath, 'r') as f:
+                reader = csv.DictReader(f)
+                data = next(reader)
+                return cls.from_dict(data)
+        except Exception as e:
+            logging.error(f"Failed to load config from CSV: {e}")
+            return cls() # Return default
+
 
 
 # =============================================================================
